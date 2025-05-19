@@ -1,0 +1,101 @@
+/* Categories Container */
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0d773, #e8e8e8);  /* Gradient with #ffcc00 */
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+/* Individual Category Box */
+.category {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid #f0d773;  /* Colorful border on top using #ffcc00 */
+  position: relative;
+}
+
+/* Category Hover Effects */
+.category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Title */
+.category h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Category Items List */
+.category-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Individual Category Item */
+.category-item {
+  padding: 10px 14px;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  text-align: center;
+  color: #555;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.category-item:hover {
+  background-color: #f0d773; /* Use #ffcc00 on hover */
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Category Items - Active State (for selected item) */
+.category-item.active {
+  background-color: #f0d773; /* Active state with #ffcc00 */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.4);
+}
+
+/* Background behind Category */
+.category:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/asfalt.png'); /* Subtle texture pattern */
+  opacity: 0.1;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .categories-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

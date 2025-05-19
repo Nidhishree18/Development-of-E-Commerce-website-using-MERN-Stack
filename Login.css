@@ -1,0 +1,90 @@
+/* Advanced UI for .auth-container */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f9f6c8, #feb47b); /* Gradient background */
+}
+
+.auth-container h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Increased gap for better spacing */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 2rem;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.auth-container form:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
+
+.auth-container input {
+  padding: 1rem; /* Increased padding for better touch targets */
+  font-size: 1.1rem; /* Larger text for easier readability */
+  border-radius: 8px; /* Rounded borders for inputs */
+  border: 1px solid #ddd; /* Light border */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for focus */
+}
+
+.auth-container input:focus {
+  border-color: #cbce9b; /* Focused input border color */
+  box-shadow: 0 0 5px rgba(255, 126, 95, 0.5); /* Soft shadow for focused inputs */
+}
+
+.auth-container button[type="submit"] {
+  background-color: #ff7e5f; /* Matching button color */
+  color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.auth-container button[type="submit"]:hover {
+  background-color: #feb47b; /* Lighter button color on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.auth-container button[type="submit"]:active {
+  transform: translateY(0); /* Remove lift effect when clicked */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .auth-container h2 {
+    font-size: 1.5rem; /* Smaller title on mobile */
+  }
+
+  .auth-container form {
+    padding: 1.5rem; /* Less padding on mobile */
+    max-width: 90%; /* Take up most of the screen on mobile */
+  }
+
+  .auth-container input {
+    font-size: 1rem; /* Smaller text for mobile */
+  }
+
+  .auth-container button[type="submit"] {
+    padding: 0.8rem; /* Smaller button on mobile */
+  }
+}

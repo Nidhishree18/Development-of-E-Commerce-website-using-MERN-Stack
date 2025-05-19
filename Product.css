@@ -1,0 +1,52 @@
+.about-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;                /* Enable Flexbox */
+    justify-content: space-between; /* Distribute space between items */
+    gap: 20px;                    /* Adds spacing between the elements */
+}
+
+.about-container h1 {
+    color: #ffcc00;
+    font-size: 2rem;
+    flex: 0 1 30%;                /* Control the width of the header */
+    text-align: center;
+}
+
+.about-container p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    flex: 1 1 30%;                /* Control the width of the paragraph */
+    text-align: center;
+}
+
+.about-container ul {
+    list-style-type: none;
+    padding: 0;
+    flex: 1 1 30%;                /* Control the width of the list */
+}
+
+.about-container li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Responsive Design: Stack content on smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;     /* Center align items */
+        text-align: center;      /* Center text */
+    }
+
+    .about-container h1,
+    .about-container p,
+    .about-container ul {
+        flex: 1 1 100%;          /* Allow elements to occupy full width */
+    }
+}

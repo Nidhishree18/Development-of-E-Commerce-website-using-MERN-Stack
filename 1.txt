@@ -1,0 +1,78 @@
+import React, { useState } from "react";
+import "./Card.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Cart from "../Cart";
+
+const categories = [
+  { id: 1, name: "Paan Corner", image: "/images/Paan.png" },
+  { id: 2, name: "Dairy, Bread & Eggs", image: "/images/dairy.png" },
+  { id: 3, name: "Fruits & Vegetables", image: "/images/fruits.png" },
+  { id: 4, name: "Cold Drinks & Juices", image: "/images/drinks.png" },
+];
+
+const Card = () => {
+  const [cartItems, setCartItems] = useState([]);
+  const [showCart, setShowCart] = useState(false);
+
+  const handleAddToCart = (category) => {
+    setCartItems((prevItems) => [...prevItems, category]);
+  };
+
+  return (
+    <div className="home-container">
+      <h1>Welcome to Blinkit</h1>
+
+      {/* Grid of Categories with Add to Cart Buttons */}
+      <div className="category-grid">
+        {categories.map((category) => (
+          <div key={category.id} className="category-card">
+            <img src={category.image} alt={category.name} />
+            <p>{category.name}</p>
+            <button onClick={() => handleAddToCart(category)}>Add to Cart</button>
+          </div>
+        ))}
+      </div>
+
+      {/* Cart Button to Open Cart */}
+      <button className="cart-btn" onClick={() => setShowCart(true)}>🛒 View Cart ({cartItems.length})</button>
+
+      {/* Show Cart Component if Cart is Open */}
+      {showCart && <Cart cartItems={cartItems} onClose={() => setShowCart(false)} />}
+    </div>
+  );
+};
+
+export default Card;
+
+
+import React from "react";
+import "./Cart.css";
+
+const Cart = ({ cartItems, onClose }) => {
+  return (
+    <div className="cart-overlay">
+      <div className="cart-sidebar" onClick={(e) => e.stopPropagation()}>
+        <div className="cart-header">
+          <h2>My Cart</h2>
+          <button className="close-btn" onClick={onClose}>✖</button>
+        </div>
+        <div className="cart-content">
+          {cartItems.length === 0 ? (
+            <p>Your cart is empty</p>
+          ) : (
+            cartItems.map((item, index) => (
+              <div key={index} className="cart-item">
+                <img src={item.image} alt={item.name} />
+                <p>{item.name}</p>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Cart;

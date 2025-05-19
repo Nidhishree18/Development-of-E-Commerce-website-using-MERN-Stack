@@ -1,0 +1,199 @@
+/* General layout for the order container */
+.order-container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+/* Heading styles */
+h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  color: #4caf50; /* Fresh green */
+}
+
+/* Each order card */
+.order-card {
+  background-color: #f4f4f9;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the order card */
+.order-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Order ID and other order details */
+.order-card h3 {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Customer and price details */
+.order-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 8px 0;
+}
+
+/* List of items */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+/* Individual item styles */
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for items */
+.order-item:hover {
+  background-color: #f0f0f0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Item image styles */
+.order-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #f4f4f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Item text (name, price, quantity) */
+.order-item span {
+  font-size: 1.1rem;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Item price - emphasis on price */
+.order-item span:nth-child(2) {
+  font-weight: bold;
+  color: #28a745; /* Green for price */
+}
+
+/* Item quantity */
+.order-item span:nth-child(3) {
+  color: #888;
+  font-style: italic;
+}
+
+/* Order status */
+.status {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #ff5722; /* Bright red/orange for status */
+}
+
+/* Timer showing when the order was placed */
+.timer {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Loading and error messages */
+p {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Animated loading spinner */
+.loading-spinner {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loading-spinner::before {
+  content: '';
+  display: block;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Button styles (for potential actions) */
+button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+.vehicle-moving {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+}
+
+.vehicle-icon {
+  width: 30px; /* Size of the car icon */
+  height: 30px;
+  animation: moveVehicle 5s linear infinite;
+}
+
+@keyframes moveVehicle {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(200px); /* Move to the right by 200px */
+  }
+}

@@ -1,0 +1,57 @@
+/* Timer.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ebdcda, #e3d1cf, #dba0a4); /* Soft warm gradient */
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif; /* Updated font */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.timer-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.timer-display {
+    background-color: rgba(0, 0, 0, 0.4); /* Slightly lighter transparent black background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+.timer-countdown {
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    animation: countdownAnimation 1s ease-out;
+}
+
+.timer-message {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #151514; /* Soft warm yellow for message */
+}
+
+.timer-message strong {
+    font-size: 1.5rem;
+    color: #151513; /* Highlight countdown with bright yellow */
+}
+
+@keyframes countdownAnimation {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

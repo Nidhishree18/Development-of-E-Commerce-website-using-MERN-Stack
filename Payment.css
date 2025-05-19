@@ -1,0 +1,187 @@
+/* Overall Container */
+.payment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* Heading Styles */
+  .payment-container h2 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .payment-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Payment Method Buttons */
+  .payment-method-buttons button {
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    margin: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-method-buttons button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Payment Details Section */
+  .payment-details-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-details-section input,
+  .payment-details-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  .payment-details-section input:focus,
+  .payment-details-section textarea:focus {
+    border-color: #ffcc00;
+  }
+  
+  .payment-details-section button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .payment-details-section button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Address Form */
+  .address-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .address-form input,
+  .address-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .address-form input:focus,
+  .address-form textarea:focus {
+    border-color: #ffcc00;
+  }
+  
+  .address-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .address-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Success Message */
+  .success-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #4CAF50;
+  }
+  
+  .success-message p {
+    font-size: 1.3rem;
+  }
+  
+  /* Popup */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  .popup h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .popup button {
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .popup button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .payment-container {
+      padding: 15px;
+    }
+  
+    .payment-method-buttons button {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .payment-details-section button,
+    .address-form button {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  
